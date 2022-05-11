@@ -15,6 +15,9 @@ app.use(cors());
 
 // const Comics = response.data;
 const apiKey = process.env.API_KEY;
+app.get("/", (req, res) => {
+  res.status(200).json("Welcome !");
+});
 
 app.get("/comics", async (req, res) => {
   try {
