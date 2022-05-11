@@ -27,7 +27,7 @@ app.get("/comics", async (req, res) => {
     console.log(response);
     res.json(response.data);
   } catch (error) {
-    res.status(400).json({ error: { message: error.message } });
+    res.status(400).json(error.message);
   }
 });
 
