@@ -66,7 +66,7 @@ app.get("/characters", async (req, res) => {
     res.status(400).json({ error: { message: error.message } });
   }
 });
-app.get("/comics/:characterId", async (req, res) => {
+app.get("/character/:characterId", async (req, res) => {
   try {
     const characterId = req.params.characterId;
     const response = await axios.get(
