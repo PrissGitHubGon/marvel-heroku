@@ -1,1 +1,20 @@
-//creation de compte pour la connection et l'inscription sur le site
+const mongoose = require("mongoose");
+
+const User = mongoose.model("User", {
+  email: {
+    unique: true,
+    type: String,
+  },
+  account: {
+    username: {
+      required: true,
+      type: String,
+    },
+  },
+  newsletter: Boolean,
+  token: String,
+  hash: String,
+  salt: String,
+});
+
+module.exports = User;
